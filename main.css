@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Roboto+Mono&display=swap');
+
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Everything */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+}
+
+/* Nav */
+nav {
+    display: none;
+    justify-content: space-between;
+    padding: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 1;
+    font: 400 90px/1.5 'Roboto Mono', monospace;
+    letter-spacing: 30px;
+}
+
+@media all and (max-width: 700px) {
+    nav {
+        font-size: 60px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    nav {
+        font-size: 35px;
+        letter-spacing: 20px;
+    }
+}
+
+nav a:hover, a.active {
+	text-decoration: none;
+ 	color: goldenrod;
+}
+
+/* JavaScript */
+
+body.is-showing-menu nav {
+    display: flex;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    padding: 30px 20px;
+    justify-content: space-between;
+}
+
+header h1 {
+    font: 60px/1 'Indie Flower', cursive;
+    text-align: center;
+    padding: 10px;
+}
+
+@media all and (max-width: 600px) {
+    header h1 {
+        font-size: 15px;
+        padding: 34px 6px 0px 3px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    header h1 {
+        font-size: 25px;
+    }
+}
+
+/* Main content */
+
+.photo-gallery a {
+    color: #fff;
+    display: inline-block;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24px;
+    position: relative;
+    width: 33%;
+}
+
+.photo-gallery img {
+    width: 100%;
+}
+
+.photo-gallery span {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.photo-gallery a:hover span {
+    display: block;
+}
+
+.photo-gallery a aside::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+}
+
+.photo-gallery a:hover aside::before {
+    display: block;
+    background: rgba(0,0,0,0.4);
+    content: "";
+}
+
+.plain-post, .diary-post {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 850px;
+    padding: 0 20px;
+}
+
+.diary-post {
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+    background-size: 100% 45px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+}
+
+.plain-post h1, .diary-post h1 {
+    font: 700 38px 'Roboto Mono', monospace;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.plain-post h1 {
+    margin-bottom: 10px;
+}
+
+.plain-post p, .diary-post p {
+    font: 30px/1.5 'Indie Flower', cursive;
+}
+
+.plain-post img, .diary-post img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.diary-post img {
+    height: 445px;
+    width: unset;
+}
+
+@media all and (max-width: 500px) {
+    .plain-post, .diary-post {
+        width: 100%;
+    }
+
+    .diary-post {
+        background-size: 100% 30px;
+    }
+
+    .plain-post h1, .diary-post h1 {
+        font-size: 30px;
+    }
+
+    .plain-post p, .diary-post p {
+        font-size: 20px;
+    }
+
+    .diary-post img {
+        width: 100%;
+        height: auto;
+    }
+
+    .photo-gallery a {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Footer */
+
+footer {
+    align-items: center;
+    display: flex;
+    font-family: 'Roboto Mono', monospace;
+    padding: 40px 20px;
+    justify-content: space-between;
+}
+
+.icons li {
+    display: inline-block;
+}
+
+.icons-contact {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons img {
+    margin: 0 5px;
+    width: 24px;
+}
+
+.icons-contact img {
+    width: 50px;
+}
+
+/* Circle */
+
+.plain-post .img-circle-mask {
+    clip-path: circle(37% at 42%);
+    -webkit-clip-path: circle(37% at 42%);
+    shape-outside: circle(50% at 40%);
+    float: left;
+    width: 40%;
+
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}

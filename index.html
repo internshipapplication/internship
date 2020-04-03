@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Diary of a Visa Holder</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">DIARY</a></li>
+        </ul>
+        <a href="#" class="js-close-menu">X</a>
+    </nav>
+
+    <header>
+        <a href="index.html">
+            <img src="image/logo.jpg" width="100" height="80" alt="main_page">
+        <a href="menu.html">
+            <img class="js-show-menu" src="image/hamberger-08.jpg" width="80" height="80">
+        </a>
+    </header>
+
+    <main>
+        <div class="photo-gallery">
+            <a href="diary_1.html">
+                <img src="image/ARTWORK-02.jpg" alt="Clorox">
+                <aside><span>01/22/20</span></aside>
+            </a
+            ><a href="diary_2.html">
+                <img src="image/ARTWORK-03.jpg"  alt="Diet Pepsi">
+                <aside><span>01/24/20</span></aside>
+            </a
+            ><a href="diary_3.html">
+                <img src="image/ARTWORK-04.jpg" alt="Tillamook">
+                <aside><span>01/26/20</span></aside>
+            </a
+            ><a href="diary_4.html">
+                <img src="image/ARTWORK-05.jpg" alt="NFL logo">
+                <aside><span>02/02/20</span></aside>
+            </a
+            ><a href="diary_5.html">
+                <img src="image/ARTWORK-06.jpg" alt="Holiday Cards">
+                <aside><span>02/05/20</span></aside>
+            </a
+            ><a href="diary_6.html">
+                <img src="image/ARTWORK-07.jpg" alt="Tellitubbies">
+                <aside><span>02/07/20</span></aside>
+            </a
+            >
+        </div>
+    </main>
+
+    <footer>
+        <p>© All rights reserved.</p>
+        <ul class="icons">
+            <li>
+                <a href="https://twitter.com/diaryofhahn"><img src="image/social/twitter.png" alt="Twitter"></a>
+            </li
+            ><li>
+                <a href="https://www.facebook.com/Diary-of-a-Visa-Holder-102202381363199"><img src="image/social/facebook.png" alt="Facebook"></a>
+            </li
+            ><li>
+                <a href="https://www.instagram.com/diaryofavisaholder"><img src="image/social/instagram.png" alt="Instagram"></a>
+            </li>
+        </ul>
+    </footer>
+
+    <script>
+        document.querySelector('.js-show-menu').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.body.classList.add('is-showing-menu');
+        });
+
+        document.querySelector('.js-close-menu').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.body.classList.remove('is-showing-menu');
+        });
+    </script>
+</body>
+
+</html>

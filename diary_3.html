@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Diary of a Visa Holder</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">DIARY</a></li>
+        </ul>
+        <a href="#" class="js-close-menu">X</a>
+    </nav>
+
+    <header>
+        <a href="index.html">
+            <img src="image/logo_2.jpg" width="100" height="80" alt="main_page">
+        </a>
+        <a href="menu.html">
+            <img class="js-show-menu" src="Image/hamberger-08.jpg" width="80" height="80">
+        </a>
+    </header>
+
+    <main>
+        <div class="diary-post">
+            <h1>"If I ever get a pet moose, <br> I will name him Tillamook."</h1>
+
+            <img src="image/diary/Diary-07.png" alt="Tillamook">
+            <p>There are so many options you can choose in the grocery stores nowadays, especially cheese. I grew up eating plastic textured orange squares, thinking I don’t really like cheese. When I first had my sharp cheddar, I got hooked right away.</p>
+
+            <img src="image/diary/Diary-18.png" alt="Cheese">
+
+            <p>Apparently, Fragments of cheese protein, called casomorphins, attach to the same brain receptors as heroin and other narcotics. As a result, each bite of cheese produces a tiny hit of dopamine.</p>
+
+            <img src="image/diary/Diary-08.png" alt="Swiss Cheese">
+            <p>" Hi, my name is Hahn, and I’m addicted to cheese." </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© All rights reserved.</p>
+        <a href="index.html">
+            <img src="image/logo_3.jpg" width="100" height="80" alt="main_page">
+        </a>
+    </footer>
+
+    <script>
+        document.querySelector('.js-show-menu').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.body.classList.add('is-showing-menu');
+        });
+
+        document.querySelector('.js-close-menu').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.body.classList.remove('is-showing-menu');
+        });
+    </script>
+
+</body>
+</html>

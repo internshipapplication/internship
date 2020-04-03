@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Diary of a Visa Holder</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">DIARY</a></li>
+        </ul>
+        <a href="#" class="js-close-menu">X</a>
+    </nav>
+
+    <header>
+        <a href="index.html">
+            <img src="image/logo_2.jpg" width="100" height="80" alt="main_page">
+        </a>
+        <a href="menu.html">
+            <img class="js-show-menu" src="Image/hamberger-08.jpg" width="80" height="80">
+        </a>
+    </header>
+
+    <main>
+        <div class="diary-post">
+            <h1>"In Clorox We Wipe."</h1>
+
+            <img src="image/diary/Diary-01.png" alt="Clorox">
+
+                <p>During the flu season, my boss handed me Clorox wipes. He told me to wipe down every inch of the computer and keyboard every hour. <br><br>“Germs everywhere, Hahn! I don't want to get sick!“, he said. </p>
+
+            <img src="image/diary/Diary-02.png" alt="Envelope">
+            <p>The following day, we had to sign a birthday card for one of the employees. I happened to be the last person signing, so I had to seal it. I tried to find  tape or glue. I checked every drawer but I couldn’t find anything. I knocked on my boss’s office.
+            <br><br>“Do you have some glue?” I asked. <br> He looked at me for a second and laughed. </p>
+
+            <img src="image/diary/Diary-03.png" atl="My Boss">
+
+            <p>
+            “Oh, you don’t need glue!” <br> He licked the envelope, then handed the card back to me.
+            <br><br>“There you go!” He smiled.
+
+            <br><br>. . . I didn't know what to do with it.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© All rights reserved.</p>
+        <a href="index.html">
+            <img src="image/logo_3.jpg" width="100" height="80" alt="main_page">
+        </a>
+    </footer>
+
+    <script>
+        document.querySelector('.js-show-menu').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.body.classList.add('is-showing-menu');
+        });
+
+        document.querySelector('.js-close-menu').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.body.classList.remove('is-showing-menu');
+        });
+    </script>
+
+</body>
+</html>
